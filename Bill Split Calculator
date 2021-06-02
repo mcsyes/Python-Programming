@@ -1,0 +1,15 @@
+print("Welcome to the Bill Split calculator")
+Bill = float(input("What was the total bill amount? "))
+
+#Enter the Tip_percentage value in numbers only, DO NOT add % symbol
+Tip_percentage = float(input("What percentage tip would you like to give? 10, 12, 15, etc..?"))
+
+People = int(input("How many people to split the bill amount with?"))
+
+Tip = 1 + Tip_percentage/100
+
+Split = "{:.2f}".format(round((Bill/People)* Tip, 2))
+
+message = (f"Each Person should pay: {Split}") 
+
+print(message)
